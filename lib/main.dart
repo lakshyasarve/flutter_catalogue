@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalogue/screens/bottom_bar.dart';
+import 'package:flutter_catalogue/screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,14 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: const Text('Welcome to Flutter Day 1'),
-          ),
-        ),
-      ),
+    
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Ticket Booking App",
+      home: BottomBar(),
     );
   }
 }
