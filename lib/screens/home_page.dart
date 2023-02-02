@@ -4,6 +4,7 @@ import 'package:flutter_catalogue/screens/hotel_screen.dart';
 import 'package:flutter_catalogue/screens/ticket_view.dart';
 import 'package:flutter_catalogue/utils/app_info_list.dart';
 import 'package:flutter_catalogue/utils/app_styles.dart';
+import 'package:flutter_catalogue/widgets/double_text_widget.dart';
 import 'package:gap/gap.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,17 +55,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const Gap(40),
-              Row(    
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Upcoming Flights", style: Styles.headLineStyle2),
-                  GestureDetector(
-                    onTap: (){
-                      print("You are tapped");
-                    },
-                    child: Text("View all", style: Styles.textStyle.copyWith(color: Styles.primaryColor),))
-                ],
-              )
+              const AppDoubleTextWidget(bigText: "Upcoming Flights", smallText: "View all")
             ]),
           ),
           const Gap(15),
@@ -76,17 +67,7 @@ class HomePage extends StatelessWidget {
           const Gap(15),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(    
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Hotels", style: Styles.headLineStyle2),
-                    GestureDetector(
-                      onTap: (){
-                        print("You are tapped");
-                      },
-                      child: Text("View all", style: Styles.textStyle.copyWith(color: Styles.primaryColor),))
-                  ],
-                ),
+            child: const AppDoubleTextWidget(bigText: "Hotels", smallText: "View all")
           ),
           Gap(15),
           SingleChildScrollView(

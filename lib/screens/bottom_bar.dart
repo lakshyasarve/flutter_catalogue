@@ -1,7 +1,9 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalogue/screens/home_page.dart';
+import 'package:flutter_catalogue/screens/profile_screen.dart';
 import 'package:flutter_catalogue/screens/search_screen.dart';
+import 'package:flutter_catalogue/screens/ticket_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -15,8 +17,8 @@ class _BottomBarState extends State<BottomBar> {
   static final List<Widget>_widgetOptions = <Widget>[
     const HomePage(),
     const SearchScreen(),
-    const Text("Tickets"),
-    const Text("Profile")
+    const TicketScreen(),
+    const ProfileScreen()
   ];
 
   void _onItemTapped(int index){
